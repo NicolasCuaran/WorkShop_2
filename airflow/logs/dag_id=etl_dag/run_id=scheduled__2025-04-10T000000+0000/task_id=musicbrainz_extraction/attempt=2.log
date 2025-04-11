@@ -1,0 +1,330 @@
+[2025-04-11T01:25:29.571+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-04-11T01:25:29.588+0000] {taskinstance.py:2603} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_dag.musicbrainz_extraction scheduled__2025-04-10T00:00:00+00:00 [queued]>
+[2025-04-11T01:25:29.596+0000] {taskinstance.py:2603} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_dag.musicbrainz_extraction scheduled__2025-04-10T00:00:00+00:00 [queued]>
+[2025-04-11T01:25:29.597+0000] {taskinstance.py:2856} INFO - Starting attempt 2 of 3
+[2025-04-11T01:25:29.610+0000] {taskinstance.py:2879} INFO - Executing <Task(_PythonDecoratedOperator): musicbrainz_extraction> on 2025-04-10 00:00:00+00:00
+[2025-04-11T01:25:29.620+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=134) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-04-11T01:25:29.621+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'etl_dag', 'musicbrainz_extraction', 'scheduled__2025-04-10T00:00:00+00:00', '--job-id', '12', '--raw', '--subdir', 'DAGS_FOLDER/dag_for_workshop.py', '--cfg-path', '/tmp/tmp0mrsxmi3']
+[2025-04-11T01:25:29.623+0000] {standard_task_runner.py:72} INFO - Started process 136 to run task
+[2025-04-11T01:25:29.624+0000] {standard_task_runner.py:105} INFO - Job 12: Subtask musicbrainz_extraction
+[2025-04-11T01:25:29.665+0000] {task_command.py:467} INFO - Running <TaskInstance: etl_dag.musicbrainz_extraction scheduled__2025-04-10T00:00:00+00:00 [running]> on host ebadb61ea72f
+[2025-04-11T01:25:29.729+0000] {taskinstance.py:3122} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='example@example.com' AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='etl_dag' AIRFLOW_CTX_TASK_ID='musicbrainz_extraction' AIRFLOW_CTX_EXECUTION_DATE='2025-04-10T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-04-10T00:00:00+00:00'
+[2025-04-11T01:25:29.731+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-04-11T01:25:29.736+0000] {etl.py:35} ERROR - Error extracting MusicBrainz data: [Errno 2] No such file or directory: '../data/artist.csv'
+[2025-04-11T01:25:29.737+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-04-11T01:25:29.746+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-04-11T01:25:29.746+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=etl_dag, task_id=musicbrainz_extraction, run_id=scheduled__2025-04-10T00:00:00+00:00, execution_date=20250410T000000, start_date=20250411T012529, end_date=20250411T012529
+[2025-04-11T01:25:29.804+0000] {local_task_job_runner.py:261} INFO - Task exited with return code 0
+[2025-04-11T01:25:29.839+0000] {taskinstance.py:3891} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-04-11T01:25:29.844+0000] {local_task_job_runner.py:240} INFO - ::endgroup::
+[2025-04-11T16:21:10.377+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-04-11T16:21:10.401+0000] {taskinstance.py:2603} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_dag.musicbrainz_extraction scheduled__2025-04-10T00:00:00+00:00 [queued]>
+[2025-04-11T16:21:10.413+0000] {taskinstance.py:2603} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_dag.musicbrainz_extraction scheduled__2025-04-10T00:00:00+00:00 [queued]>
+[2025-04-11T16:21:10.414+0000] {taskinstance.py:2856} INFO - Starting attempt 2 of 3
+[2025-04-11T16:21:10.432+0000] {taskinstance.py:2879} INFO - Executing <Task(_PythonDecoratedOperator): musicbrainz_extraction> on 2025-04-10 00:00:00+00:00
+[2025-04-11T16:21:10.440+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=93) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-04-11T16:21:10.442+0000] {standard_task_runner.py:72} INFO - Started process 97 to run task
+[2025-04-11T16:21:10.443+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'etl_dag', 'musicbrainz_extraction', 'scheduled__2025-04-10T00:00:00+00:00', '--job-id', '19', '--raw', '--subdir', 'DAGS_FOLDER/dag_for_workshop.py', '--cfg-path', '/tmp/tmpjgidag66']
+[2025-04-11T16:21:10.446+0000] {standard_task_runner.py:105} INFO - Job 19: Subtask musicbrainz_extraction
+[2025-04-11T16:21:10.502+0000] {task_command.py:467} INFO - Running <TaskInstance: etl_dag.musicbrainz_extraction scheduled__2025-04-10T00:00:00+00:00 [running]> on host 098abfa9a67d
+[2025-04-11T16:21:10.614+0000] {taskinstance.py:3122} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='example@example.com' AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='etl_dag' AIRFLOW_CTX_TASK_ID='musicbrainz_extraction' AIRFLOW_CTX_EXECUTION_DATE='2025-04-10T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-04-10T00:00:00+00:00'
+[2025-04-11T16:21:10.616+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-04-11T16:21:10.642+0000] {api_extract.py:47} INFO - Total artists to process: 2691
+[2025-04-11T16:21:11.322+0000] {api_extract.py:68} INFO - Data for Ibrahim Ferrer extracted successfully.
+[2025-04-11T16:21:13.032+0000] {api_extract.py:68} INFO - Data for Vienna Boys Choir, Vienna Singverein Chorus extracted successfully.
+[2025-04-11T16:21:14.653+0000] {api_extract.py:68} INFO - Data for San Francisco Symphony Chorus extracted successfully.
+[2025-04-11T16:21:16.365+0000] {api_extract.py:68} INFO - Data for Johnny Whitehorse extracted successfully.
+[2025-04-11T16:21:18.068+0000] {api_extract.py:68} INFO - Data for Gregg Smith Singers extracted successfully.
+[2025-04-11T16:21:19.789+0000] {api_extract.py:68} INFO - Data for Boston Symphony Orchestra extracted successfully.
+[2025-04-11T16:21:21.424+0000] {api_extract.py:68} INFO - Data for Rome Opera Orchestra extracted successfully.
+[2025-04-11T16:21:23.060+0000] {api_extract.py:68} INFO - Data for Buckwheat Zydeco extracted successfully.
+[2025-04-11T16:21:24.701+0000] {api_extract.py:68} INFO - Data for Robert Shaw Chorale extracted successfully.
+[2025-04-11T16:21:26.398+0000] {api_extract.py:68} INFO - Data for Survivor extracted successfully.
+[2025-04-11T16:21:28.138+0000] {api_extract.py:68} INFO - Data for The Gotham Jazz Orchestra extracted successfully.
+[2025-04-11T16:21:29.769+0000] {api_extract.py:68} INFO - Data for Evelyn Glennie extracted successfully.
+[2025-04-11T16:21:31.455+0000] {api_extract.py:68} INFO - Data for Chip Davis (Mannheim Steamroller) extracted successfully.
+[2025-04-11T16:21:33.220+0000] {api_extract.py:68} INFO - Data for Dan Zanes And Friends extracted successfully.
+[2025-04-11T16:21:34.903+0000] {api_extract.py:68} INFO - Data for The Blackwood Brothers extracted successfully.
+[2025-04-11T16:21:36.576+0000] {api_extract.py:68} INFO - Data for Columbia Chamber Orchestra extracted successfully.
+[2025-04-11T16:21:38.250+0000] {api_extract.py:68} INFO - Data for Fritz Reiner, conductor extracted successfully.
+[2025-04-11T16:21:39.961+0000] {api_extract.py:68} INFO - Data for The Chestnut Brass Company extracted successfully.
+[2025-04-11T16:21:41.805+0000] {api_extract.py:68} INFO - Data for Chris Rock extracted successfully.
+[2025-04-11T16:21:43.508+0000] {api_extract.py:68} INFO - Data for John Legend) extracted successfully.
+[2025-04-11T16:21:45.253+0000] {api_extract.py:68} INFO - Data for The Revolution extracted successfully.
+[2025-04-11T16:21:46.897+0000] {api_extract.py:68} INFO - Data for William Warfield extracted successfully.
+[2025-04-11T16:21:48.634+0000] {api_extract.py:68} INFO - Data for Charles Kuralt extracted successfully.
+[2025-04-11T16:21:50.349+0000] {api_extract.py:68} INFO - Data for Royal Philharmonic Orchestra extracted successfully.
+[2025-04-11T16:21:52.037+0000] {api_extract.py:68} INFO - Data for Sting extracted successfully.
+[2025-04-11T16:21:53.671+0000] {api_extract.py:68} INFO - Data for Bobby Bare extracted successfully.
+[2025-04-11T16:21:55.338+0000] {api_extract.py:68} INFO - Data for Los Angeles Philharmonic extracted successfully.
+[2025-04-11T16:21:57.057+0000] {api_extract.py:68} INFO - Data for Robert Preston, Barbara Cook, David Burns, Eddie Hodges, Pert Kelton, Helen Raymond extracted successfully.
+[2025-04-11T16:21:58.675+0000] {api_extract.py:68} INFO - Data for Draco Rosa extracted successfully.
+[2025-04-11T16:22:00.330+0000] {api_extract.py:68} INFO - Data for (Bulgarian State Female Vocal Choir) extracted successfully.
+[2025-04-11T16:22:01.974+0000] {api_extract.py:68} INFO - Data for Theo Croker extracted successfully.
+[2025-04-11T16:22:03.676+0000] {api_extract.py:68} INFO - Data for Jonathan extracted successfully.
+[2025-04-11T16:22:05.354+0000] {api_extract.py:68} INFO - Data for Benny Benassi extracted successfully.
+[2025-04-11T16:22:07.002+0000] {api_extract.py:68} INFO - Data for Timbaland extracted successfully.
+[2025-04-11T16:22:08.705+0000] {api_extract.py:68} INFO - Data for Wayne Shorter extracted successfully.
+[2025-04-11T16:22:10.362+0000] {api_extract.py:68} INFO - Data for Paul extracted successfully.
+[2025-04-11T16:22:11.974+0000] {api_extract.py:68} INFO - Data for Si Zentner extracted successfully.
+[2025-04-11T16:22:13.607+0000] {api_extract.py:68} INFO - Data for Cyndi Lauper extracted successfully.
+[2025-04-11T16:22:15.257+0000] {api_extract.py:68} INFO - Data for El Güero Y Su Banda Centanario extracted successfully.
+[2025-04-11T16:22:16.911+0000] {api_extract.py:68} INFO - Data for James Newton Howard extracted successfully.
+[2025-04-11T16:22:18.566+0000] {api_extract.py:68} INFO - Data for Train extracted successfully.
+[2025-04-11T16:22:20.189+0000] {api_extract.py:68} INFO - Data for Manfred Honeck extracted successfully.
+[2025-04-11T16:22:21.969+0000] {api_extract.py:68} INFO - Data for Flight Of The Conchords extracted successfully.
+[2025-04-11T16:22:23.585+0000] {api_extract.py:68} INFO - Data for Tony Hymas extracted successfully.
+[2025-04-11T16:22:25.202+0000] {api_extract.py:68} INFO - Data for Gilda Radner extracted successfully.
+[2025-04-11T16:22:26.873+0000] {api_extract.py:68} INFO - Data for Anita Kerr Singers extracted successfully.
+[2025-04-11T16:22:28.598+0000] {api_extract.py:68} INFO - Data for Original Broadway Cast With Stark Sands, Billy Porter extracted successfully.
+[2025-04-11T16:22:30.242+0000] {api_extract.py:68} INFO - Data for The Imperials extracted successfully.
+[2025-04-11T16:22:31.880+0000] {api_extract.py:68} INFO - Data for Rainer Kussmaul extracted successfully.
+[2025-04-11T16:22:33.488+0000] {api_extract.py:68} INFO - Data for Skrillex extracted successfully.
+[2025-04-11T16:22:35.201+0000] {api_extract.py:68} INFO - Data for Gnarls Barkley extracted successfully.
+[2025-04-11T16:22:36.880+0000] {api_extract.py:68} INFO - Data for (Mormon Tabernacle Choir) extracted successfully.
+[2025-04-11T16:22:38.590+0000] {api_extract.py:68} INFO - Data for Lucy Kalantari extracted successfully.
+[2025-04-11T16:22:40.210+0000] {api_extract.py:68} INFO - Data for JoAnn Falletta extracted successfully.
+[2025-04-11T16:22:41.883+0000] {api_extract.py:68} INFO - Data for Father John Misty extracted successfully.
+[2025-04-11T16:22:43.536+0000] {api_extract.py:68} INFO - Data for Kiri Te Kanawa extracted successfully.
+[2025-04-11T16:22:45.220+0000] {api_extract.py:68} INFO - Data for Melissa Etheridge extracted successfully.
+[2025-04-11T16:22:46.831+0000] {api_extract.py:68} INFO - Data for Bryan Sutton extracted successfully.
+[2025-04-11T16:22:48.446+0000] {api_extract.py:68} INFO - Data for Randy Travis extracted successfully.
+[2025-04-11T16:22:50.075+0000] {api_extract.py:68} INFO - Data for Al Bunetta, Dan Einstein extracted successfully.
+[2025-04-11T16:22:51.708+0000] {api_extract.py:68} INFO - Data for (The Doors) extracted successfully.
+[2025-04-11T16:22:53.420+0000] {api_extract.py:68} INFO - Data for Gabriel Yared extracted successfully.
+[2025-04-11T16:22:55.103+0000] {api_extract.py:68} INFO - Data for Bayreuth Festival Orchestra extracted successfully.
+[2025-04-11T16:22:56.865+0000] {api_extract.py:68} INFO - Data for Emma Walton Hamilton extracted successfully.
+[2025-04-11T16:22:58.574+0000] {api_extract.py:68} INFO - Data for Orchestra Of St. Luke's extracted successfully.
+[2025-04-11T16:23:00.212+0000] {api_extract.py:68} INFO - Data for Vienna Philharmonic extracted successfully.
+[2025-04-11T16:23:01.874+0000] {api_extract.py:68} INFO - Data for The National extracted successfully.
+[2025-04-11T16:23:03.499+0000] {api_extract.py:68} INFO - Data for They Might Be Giants extracted successfully.
+[2025-04-11T16:23:05.133+0000] {api_extract.py:68} INFO - Data for Lupillo Rivera extracted successfully.
+[2025-04-11T16:23:06.745+0000] {api_extract.py:68} INFO - Data for Dizzy Gillespie extracted successfully.
+[2025-04-11T16:23:08.507+0000] {api_extract.py:68} INFO - Data for Paul McCartney, Dave Grohl, Krist Novoselic, Pat Smear extracted successfully.
+[2025-04-11T16:23:10.164+0000] {api_extract.py:68} INFO - Data for Bill Monroe extracted successfully.
+[2025-04-11T16:23:11.952+0000] {api_extract.py:68} INFO - Data for The Afro Latin Jazz Orchestra extracted successfully.
+[2025-04-11T16:23:13.655+0000] {api_extract.py:68} INFO - Data for Leonard Bernstein, Dietrich Fischer-Dieskau, Vladimir Horowitz, Yehudi Menuhin, Mstislav Rostropovich, Isaac Stern extracted successfully.
+[2025-04-11T16:23:15.347+0000] {api_extract.py:68} INFO - Data for Bon Iver extracted successfully.
+[2025-04-11T16:23:16.980+0000] {api_extract.py:68} INFO - Data for Hillary Rodham Clinton extracted successfully.
+[2025-04-11T16:23:18.646+0000] {api_extract.py:68} INFO - Data for Adele Adkins extracted successfully.
+[2025-04-11T16:23:20.290+0000] {api_extract.py:68} INFO - Data for Carrie Underwood extracted successfully.
+[2025-04-11T16:23:21.992+0000] {api_extract.py:68} INFO - Data for The Metropolitan Opera Orchestra extracted successfully.
+[2025-04-11T16:23:23.581+0000] {api_extract.py:68} INFO - Data for Lee Ann Womack extracted successfully.
+[2025-04-11T16:23:25.336+0000] {api_extract.py:68} INFO - Data for James Conlon, Guanqun Yu, Joshua Guerrero, Patricia Racette, Christopher Maltman, Lucy Schaufer, Lucas Meachem, LA Opera Chorus extracted successfully.
+[2025-04-11T16:23:26.969+0000] {api_extract.py:68} INFO - Data for Michael Bolton extracted successfully.
+[2025-04-11T16:23:28.580+0000] {api_extract.py:68} INFO - Data for Big Thief extracted successfully.
+[2025-04-11T16:23:30.241+0000] {api_extract.py:68} INFO - Data for Steve Reich extracted successfully.
+[2025-04-11T16:23:31.905+0000] {api_extract.py:68} INFO - Data for Mason Williams extracted successfully.
+[2025-04-11T16:23:33.577+0000] {api_extract.py:68} INFO - Data for Washington Choir extracted successfully.
+[2025-04-11T16:23:35.259+0000] {api_extract.py:68} INFO - Data for Jeff Von Der Schmidt,  Southwest Chamber Music extracted successfully.
+[2025-04-11T16:23:36.928+0000] {api_extract.py:68} INFO - Data for Deutsches Symphonie-Orchester Berlin extracted successfully.
+[2025-04-11T16:23:38.589+0000] {api_extract.py:68} INFO - Data for Arif Mardin extracted successfully.
+[2025-04-11T16:23:40.203+0000] {api_extract.py:68} INFO - Data for Sophia Loren (Kent Nagano extracted successfully.
+[2025-04-11T16:23:41.919+0000] {api_extract.py:68} INFO - Data for Zac Brown Band extracted successfully.
+[2025-04-11T16:23:43.539+0000] {api_extract.py:68} INFO - Data for Glen Campbell extracted successfully.
+[2025-04-11T16:23:45.369+0000] {api_extract.py:68} INFO - Data for Rage Against The Machine extracted successfully.
+[2025-04-11T16:23:47.002+0000] {api_extract.py:68} INFO - Data for Seal extracted successfully.
+[2025-04-11T16:23:48.674+0000] {api_extract.py:68} INFO - Data for James Cleveland extracted successfully.
+[2025-04-11T16:23:50.354+0000] {api_extract.py:68} INFO - Data for Mary Mary extracted successfully.
+[2025-04-11T16:23:52.074+0000] {api_extract.py:68} INFO - Data for The Imposters extracted successfully.
+[2025-04-11T16:23:53.715+0000] {api_extract.py:68} INFO - Data for Alison Krauss extracted successfully.
+[2025-04-11T16:23:55.409+0000] {api_extract.py:68} INFO - Data for Kendrick Lamar extracted successfully.
+[2025-04-11T16:23:57.089+0000] {api_extract.py:68} INFO - Data for Zach Williams extracted successfully.
+[2025-04-11T16:23:58.754+0000] {api_extract.py:68} INFO - Data for Glenn Slater, songwriters (Mandy Moore extracted successfully.
+[2025-04-11T16:24:00.601+0000] {api_extract.py:68} INFO - Data for John Starling (With The Nash Ramblers) extracted successfully.
+[2025-04-11T16:24:02.227+0000] {api_extract.py:68} INFO - Data for Sunny Sauceda extracted successfully.
+[2025-04-11T16:24:03.951+0000] {api_extract.py:68} INFO - Data for Will Ackerman extracted successfully.
+[2025-04-11T16:24:05.605+0000] {api_extract.py:68} INFO - Data for Michael Ivins extracted successfully.
+[2025-04-11T16:24:07.243+0000] {api_extract.py:68} INFO - Data for Aziz Ansari extracted successfully.
+[2025-04-11T16:24:09.064+0000] {api_extract.py:68} INFO - Data for Nitty Gritty Dirt Band,Earl Scruggs, Randy Scruggs, Vassar Clements extracted successfully.
+[2025-04-11T16:24:10.723+0000] {api_extract.py:68} INFO - Data for Billy Childs Ensemble extracted successfully.
+[2025-04-11T16:24:12.368+0000] {api_extract.py:68} INFO - Data for Angela Lansbury extracted successfully.
+[2025-04-11T16:24:13.980+0000] {api_extract.py:68} INFO - Data for Maurizio Pollini extracted successfully.
+[2025-04-11T16:24:15.760+0000] {api_extract.py:68} INFO - Data for Tom Scott (GRP All-Star Big Band) extracted successfully.
+[2025-04-11T16:24:17.390+0000] {api_extract.py:68} INFO - Data for Hoelscher/Mattes extracted successfully.
+[2025-04-11T16:24:19.012+0000] {api_extract.py:68} INFO - Data for Daniel Ho extracted successfully.
+[2025-04-11T16:24:20.665+0000] {api_extract.py:68} INFO - Data for OutKast,Killer Mike extracted successfully.
+[2025-04-11T16:24:22.314+0000] {api_extract.py:68} INFO - Data for The Magnetic Zeros extracted successfully.
+[2025-04-11T16:24:24.083+0000] {api_extract.py:68} INFO - Data for The Weeknd extracted successfully.
+[2025-04-11T16:24:25.762+0000] {api_extract.py:68} INFO - Data for Joseph Silverstein, violin extracted successfully.
+[2025-04-11T16:24:27.456+0000] {api_extract.py:68} INFO - Data for Soul II Soul extracted successfully.
+[2025-04-11T16:24:29.175+0000] {api_extract.py:68} INFO - Data for Yola extracted successfully.
+[2025-04-11T16:24:30.927+0000] {api_extract.py:68} INFO - Data for V.M. Bhatt extracted successfully.
+[2025-04-11T16:24:32.549+0000] {api_extract.py:68} INFO - Data for Gil Shaham extracted successfully.
+[2025-04-11T16:24:34.280+0000] {api_extract.py:68} INFO - Data for Caspar Babypants extracted successfully.
+[2025-04-11T16:24:35.913+0000] {api_extract.py:68} INFO - Data for Edie Brickell extracted successfully.
+[2025-04-11T16:24:37.518+0000] {api_extract.py:68} INFO - Data for Sigourney Weaver) extracted successfully.
+[2025-04-11T16:24:39.235+0000] {api_extract.py:68} INFO - Data for Carly Simon, songwriter (Carly Simon) extracted successfully.
+[2025-04-11T16:24:40.872+0000] {api_extract.py:68} INFO - Data for Natalie Cole [With Nat "King" Cole] extracted successfully.
+[2025-04-11T16:24:42.550+0000] {api_extract.py:68} INFO - Data for Randy Brecker With Michael Brecker, Jim Beard, Will Lee, Peter Erskine, Marcio Doctor extracted successfully.
+[2025-04-11T16:24:44.213+0000] {api_extract.py:68} INFO - Data for Grover Mitchell extracted successfully.
+[2025-04-11T16:24:45.880+0000] {api_extract.py:68} INFO - Data for Colin Davis,  Michelle DeYoung, Ben Heppner, Petra Lang, Peter Mattei, Stephen Milling, Sara Mingardo extracted successfully.
+[2025-04-11T16:24:47.512+0000] {api_extract.py:68} INFO - Data for Emmylou Harris, Linda Ronstadt extracted successfully.
+[2025-04-11T16:24:49.140+0000] {api_extract.py:68} INFO - Data for Billy Davis, Jr. extracted successfully.
+[2025-04-11T16:24:50.799+0000] {api_extract.py:68} INFO - Data for The Mavericks extracted successfully.
+[2025-04-11T16:24:52.505+0000] {api_extract.py:68} INFO - Data for Clannad extracted successfully.
+[2025-04-11T16:24:54.243+0000] {api_extract.py:68} INFO - Data for Mary J. Blige (,The Harlem Boys Choir) extracted successfully.
+[2025-04-11T16:24:55.904+0000] {api_extract.py:68} INFO - Data for Lorin Maazel extracted successfully.
+[2025-04-11T16:24:57.551+0000] {api_extract.py:68} INFO - Data for Lucinda Williams extracted successfully.
+[2025-04-11T16:24:59.168+0000] {api_extract.py:68} INFO - Data for Lisa Fischer extracted successfully.
+[2025-04-11T16:25:00.822+0000] {api_extract.py:68} INFO - Data for Black Eagle extracted successfully.
+[2025-04-11T16:25:02.557+0000] {api_extract.py:68} INFO - Data for Daniel Caesar extracted successfully.
+[2025-04-11T16:25:04.178+0000] {api_extract.py:68} INFO - Data for David Arkenstone extracted successfully.
+[2025-04-11T16:25:06.051+0000] {api_extract.py:68} INFO - Data for Jason Isbell And The 400 Unit extracted successfully.
+[2025-04-11T16:25:07.680+0000] {api_extract.py:68} INFO - Data for John Tavener extracted successfully.
+[2025-04-11T16:25:09.334+0000] {api_extract.py:68} INFO - Data for English Chamber Orchestra extracted successfully.
+[2025-04-11T16:25:11.081+0000] {api_extract.py:68} INFO - Data for Buck Howdy extracted successfully.
+[2025-04-11T16:25:12.695+0000] {api_extract.py:68} INFO - Data for Cissy Houston extracted successfully.
+[2025-04-11T16:25:14.479+0000] {api_extract.py:68} INFO - Data for Double Trouble, Sugar Blue, Koko Taylor extracted successfully.
+[2025-04-11T16:25:16.112+0000] {api_extract.py:68} INFO - Data for Irakere extracted successfully.
+[2025-04-11T16:25:17.758+0000] {api_extract.py:68} INFO - Data for Paul Winter Consort extracted successfully.
+[2025-04-11T16:25:19.384+0000] {api_extract.py:68} INFO - Data for Frank Lopardo extracted successfully.
+[2025-04-11T16:25:20.989+0000] {api_extract.py:68} INFO - Data for Colbie Caillat extracted successfully.
+[2025-04-11T16:25:22.604+0000] {api_extract.py:68} INFO - Data for Shelby Lynne extracted successfully.
+[2025-04-11T16:25:24.270+0000] {api_extract.py:68} INFO - Data for Georgia Anne Muldrow extracted successfully.
+[2025-04-11T16:25:25.942+0000] {api_extract.py:68} INFO - Data for The Judds extracted successfully.
+[2025-04-11T16:25:27.726+0000] {api_extract.py:68} INFO - Data for Del McCoury Band extracted successfully.
+[2025-04-11T16:25:29.415+0000] {api_extract.py:68} INFO - Data for Blake Shelton extracted successfully.
+[2025-04-11T16:25:31.076+0000] {api_extract.py:68} INFO - Data for Kevin Abstract extracted successfully.
+[2025-04-11T16:25:32.706+0000] {api_extract.py:68} INFO - Data for Corey Carleton extracted successfully.
+[2025-04-11T16:25:34.361+0000] {api_extract.py:68} INFO - Data for German Opera Orchestra extracted successfully.
+[2025-04-11T16:25:36.030+0000] {api_extract.py:68} INFO - Data for Bad Bunny extracted successfully.
+[2025-04-11T16:25:37.653+0000] {api_extract.py:68} INFO - Data for Robert Shaw, conductor extracted successfully.
+[2025-04-11T16:25:39.365+0000] {api_extract.py:68} INFO - Data for Melissa Aldana extracted successfully.
+[2025-04-11T16:25:40.983+0000] {api_extract.py:68} INFO - Data for Frank Zappa extracted successfully.
+[2025-04-11T16:25:42.622+0000] {api_extract.py:68} INFO - Data for Burna Boy extracted successfully.
+[2025-04-11T16:25:44.444+0000] {api_extract.py:68} INFO - Data for Tyler, The Creator extracted successfully.
+[2025-04-11T16:25:46.070+0000] {api_extract.py:68} INFO - Data for Malcolm-Jamal Warner extracted successfully.
+[2025-04-11T16:25:47.758+0000] {api_extract.py:68} INFO - Data for Black:Guayaba extracted successfully.
+[2025-04-11T16:25:49.367+0000] {api_extract.py:68} INFO - Data for I Prevail extracted successfully.
+[2025-04-11T16:25:51.024+0000] {api_extract.py:68} INFO - Data for Dolly Parton extracted successfully.
+[2025-04-11T16:25:52.659+0000] {api_extract.py:68} INFO - Data for Los Fabulosos Cadillacs extracted successfully.
+[2025-04-11T16:25:54.297+0000] {api_extract.py:68} INFO - Data for Juice Newton extracted successfully.
+[2025-04-11T16:25:56.063+0000] {api_extract.py:68} INFO - Data for The Monks Of Sherab Ling Monastery extracted successfully.
+[2025-04-11T16:25:57.673+0000] {api_extract.py:68} INFO - Data for Sam Cooke extracted successfully.
+[2025-04-11T16:25:59.315+0000] {api_extract.py:68} INFO - Data for Jerry Douglas extracted successfully.
+[2025-04-11T16:26:01.061+0000] {api_extract.py:68} INFO - Data for Ali Farka Touré extracted successfully.
+[2025-04-11T16:26:02.706+0000] {api_extract.py:68} INFO - Data for Joao Gilberto extracted successfully.
+[2025-04-11T16:26:04.406+0000] {api_extract.py:68} INFO - Data for Henryk Szeryng extracted successfully.
+[2025-04-11T16:26:06.104+0000] {api_extract.py:68} INFO - Data for Original Broadway Cast With Jonathan Groff, Lea Michele extracted successfully.
+[2025-04-11T16:26:07.744+0000] {api_extract.py:68} INFO - Data for Laurie Anderson extracted successfully.
+[2025-04-11T16:26:09.436+0000] {api_extract.py:68} INFO - Data for Terry Lewis extracted successfully.
+[2025-04-11T16:26:11.108+0000] {api_extract.py:68} INFO - Data for Living Colour extracted successfully.
+[2025-04-11T16:26:12.781+0000] {api_extract.py:68} INFO - Data for Tanya Tucker extracted successfully.
+[2025-04-11T16:26:14.450+0000] {api_extract.py:68} INFO - Data for Green Day extracted successfully.
+[2025-04-11T16:26:16.143+0000] {api_extract.py:68} INFO - Data for Royal Opera House Orchestra - Covent Garden extracted successfully.
+[2025-04-11T16:26:17.794+0000] {api_extract.py:68} INFO - Data for Lamont Dozier, songwriters (Phil Collins) extracted successfully.
+[2025-04-11T16:26:19.475+0000] {api_extract.py:68} INFO - Data for Patrick Stewart extracted successfully.
+[2025-04-11T16:26:21.142+0000] {api_extract.py:68} INFO - Data for Omar Akram extracted successfully.
+[2025-04-11T16:26:22.845+0000] {api_extract.py:68} INFO - Data for Robert Morse, Rudy Vallee, Charles Nelson Reilly, Bonnie Scott, Claudette Southerland, Sammy Smith extracted successfully.
+[2025-04-11T16:26:24.495+0000] {api_extract.py:68} INFO - Data for Anita Pointer, Ruth Pointer extracted successfully.
+[2025-04-11T16:26:26.173+0000] {api_extract.py:68} INFO - Data for John Coltrane extracted successfully.
+[2025-04-11T16:26:27.806+0000] {api_extract.py:68} INFO - Data for Kim Kashkashian extracted successfully.
+[2025-04-11T16:26:29.520+0000] {api_extract.py:68} INFO - Data for Ricky Martin extracted successfully.
+[2025-04-11T16:26:31.153+0000] {api_extract.py:68} INFO - Data for Kelly Clarkson extracted successfully.
+[2025-04-11T16:26:32.776+0000] {api_extract.py:68} INFO - Data for Cyrille Aimée extracted successfully.
+[2025-04-11T16:26:34.506+0000] {api_extract.py:68} INFO - Data for Niels Pedersen extracted successfully.
+[2025-04-11T16:26:36.192+0000] {api_extract.py:68} INFO - Data for Wisin y Yandel extracted successfully.
+[2025-04-11T16:26:37.832+0000] {api_extract.py:68} INFO - Data for Isley Brothers extracted successfully.
+[2025-04-11T16:26:39.557+0000] {api_extract.py:68} INFO - Data for Charley Patton extracted successfully.
+[2025-04-11T16:26:41.238+0000] {api_extract.py:68} INFO - Data for Brian Eno extracted successfully.
+[2025-04-11T16:26:42.891+0000] {api_extract.py:68} INFO - Data for Christian Scott aTunde Adjuah extracted successfully.
+[2025-04-11T16:26:44.561+0000] {api_extract.py:68} INFO - Data for Thelonious Monk extracted successfully.
+[2025-04-11T16:26:46.209+0000] {api_extract.py:68} INFO - Data for Ghost extracted successfully.
+[2025-04-11T16:26:47.900+0000] {api_extract.py:68} INFO - Data for George Crumb extracted successfully.
+[2025-04-11T16:26:49.607+0000] {api_extract.py:68} INFO - Data for Music extracted successfully.
+[2025-04-11T16:26:51.362+0000] {api_extract.py:68} INFO - Data for Vincent de Rosa extracted successfully.
+[2025-04-11T16:26:53.008+0000] {api_extract.py:68} INFO - Data for Whitney Houston extracted successfully.
+[2025-04-11T16:26:54.871+0000] {api_extract.py:68} INFO - Data for Black Keys, The extracted successfully.
+[2025-04-11T16:26:56.733+0000] {api_extract.py:68} INFO - Data for Sean Connors, Robert Dillon, Peter Martin extracted successfully.
+[2025-04-11T16:26:58.340+0000] {api_extract.py:68} INFO - Data for Tracy Chapman extracted successfully.
+[2025-04-11T16:27:00.052+0000] {api_extract.py:68} INFO - Data for O'Kanes extracted successfully.
+[2025-04-11T16:27:01.761+0000] {api_extract.py:68} INFO - Data for The Roots extracted successfully.
+[2025-04-11T16:27:03.402+0000] {api_extract.py:68} INFO - Data for St. Louis Symphony extracted successfully.
+[2025-04-11T16:27:05.100+0000] {api_extract.py:68} INFO - Data for Tori Kelly,Kirk Franklin extracted successfully.
+[2025-04-11T16:27:06.766+0000] {api_extract.py:68} INFO - Data for Aerosmith extracted successfully.
+[2025-04-11T16:27:08.381+0000] {api_extract.py:68} INFO - Data for Abigail Washburn extracted successfully.
+[2025-04-11T16:27:10.151+0000] {api_extract.py:68} INFO - Data for Michael Brecker extracted successfully.
+[2025-04-11T16:27:11.803+0000] {api_extract.py:68} INFO - Data for Killswitch Engage extracted successfully.
+[2025-04-11T16:27:13.441+0000] {api_extract.py:68} INFO - Data for Bebe Winans extracted successfully.
+[2025-04-11T16:27:15.179+0000] {api_extract.py:68} INFO - Data for Ella Mai extracted successfully.
+[2025-04-11T16:27:16.826+0000] {api_extract.py:68} INFO - Data for Ramblin' Jack Elliott extracted successfully.
+[2025-04-11T16:27:18.438+0000] {api_extract.py:68} INFO - Data for Duke Ellington extracted successfully.
+[2025-04-11T16:27:20.137+0000] {api_extract.py:68} INFO - Data for RCA Orchestra extracted successfully.
+[2025-04-11T16:27:21.835+0000] {api_extract.py:68} INFO - Data for Emmanuelle Ophèle extracted successfully.
+[2025-04-11T16:27:23.500+0000] {api_extract.py:68} INFO - Data for Helen Reddy extracted successfully.
+[2025-04-11T16:27:25.241+0000] {api_extract.py:68} INFO - Data for The Statler Brothers extracted successfully.
+[2025-04-11T16:27:26.853+0000] {api_extract.py:68} INFO - Data for Gary McFarland extracted successfully.
+[2025-04-11T16:27:28.608+0000] {api_extract.py:68} INFO - Data for The Blues Machine, Luther "Guitar Junior" Johnson, J.B. Hutto extracted successfully.
+[2025-04-11T16:27:30.242+0000] {api_extract.py:68} INFO - Data for James Anthony Carmichael extracted successfully.
+[2025-04-11T16:27:31.872+0000] {api_extract.py:68} INFO - Data for Dua Lipa,Diplo extracted successfully.
+[2025-04-11T16:27:33.502+0000] {api_extract.py:68} INFO - Data for Judas Priest extracted successfully.
+[2025-04-11T16:27:35.353+0000] {api_extract.py:68} INFO - Data for Academy Of St. Martin-In-The Fields extracted successfully.
+[2025-04-11T16:27:36.988+0000] {api_extract.py:68} INFO - Data for Orchestra extracted successfully.
+[2025-04-11T16:27:38.664+0000] {api_extract.py:68} INFO - Data for Martin Luther King Jr. extracted successfully.
+[2025-04-11T16:27:40.348+0000] {api_extract.py:68} INFO - Data for Verdell Primeaux extracted successfully.
+[2025-04-11T16:27:42.017+0000] {api_extract.py:68} INFO - Data for Eminem, Dr. Dre extracted successfully.
+[2025-04-11T16:27:43.669+0000] {api_extract.py:68} INFO - Data for Paul Winchell extracted successfully.
+[2025-04-11T16:27:45.312+0000] {api_extract.py:68} INFO - Data for Alejandro Sanz extracted successfully.
+[2025-04-11T16:27:47.014+0000] {api_extract.py:68} INFO - Data for Them Crooked Vultures extracted successfully.
+[2025-04-11T16:27:48.696+0000] {api_extract.py:68} INFO - Data for (The Maranatha! Kids) extracted successfully.
+[2025-04-11T16:27:50.387+0000] {api_extract.py:68} INFO - Data for The Associates Choir extracted successfully.
+[2025-04-11T16:27:52.185+0000] {api_extract.py:68} INFO - Data for Kurt Ollmann extracted successfully.
+[2025-04-11T16:27:53.826+0000] {api_extract.py:68} INFO - Data for Jacob Collier extracted successfully.
+[2025-04-11T16:27:55.553+0000] {api_extract.py:68} INFO - Data for Blanton Alspaugh extracted successfully.
+[2025-04-11T16:27:57.196+0000] {api_extract.py:68} INFO - Data for Jeff Lorber Fusion extracted successfully.
+[2025-04-11T16:27:58.980+0000] {api_extract.py:68} INFO - Data for Lucas Richman, Various Artists extracted successfully.
+[2025-04-11T16:28:00.660+0000] {api_extract.py:68} INFO - Data for Louis C.K. extracted successfully.
+[2025-04-11T16:28:02.430+0000] {api_extract.py:68} INFO - Data for Ellerhein Girls' Choir extracted successfully.
+[2025-04-11T16:28:04.135+0000] {api_extract.py:68} INFO - Data for Daniel Barenboim,  Artur Rubinstein extracted successfully.
+[2025-04-11T16:28:05.897+0000] {api_extract.py:68} INFO - Data for Lila Downs extracted successfully.
+[2025-04-11T16:28:07.699+0000] {api_extract.py:68} INFO - Data for Sean Paul extracted successfully.
+[2025-04-11T16:28:09.306+0000] {api_extract.py:68} INFO - Data for Tina Turner extracted successfully.
+[2025-04-11T16:28:11.014+0000] {api_extract.py:68} INFO - Data for John Sherba extracted successfully.
+[2025-04-11T16:28:12.694+0000] {api_extract.py:68} INFO - Data for Jimmy Carter extracted successfully.
+[2025-04-11T16:28:14.339+0000] {api_extract.py:68} INFO - Data for India.Arie extracted successfully.
+[2025-04-11T16:28:16.132+0000] {api_extract.py:68} INFO - Data for A Great Big World With Christina Aguilera extracted successfully.
+[2025-04-11T16:28:17.973+0000] {api_extract.py:68} INFO - Data for The Edwin Hawkins Singers extracted successfully.
+[2025-04-11T16:28:19.713+0000] {api_extract.py:68} INFO - Data for Robbie extracted successfully.
+[2025-04-11T16:28:21.424+0000] {api_extract.py:68} INFO - Data for Leonard Bernstein,  June Anderson, Nicolai Gedda, Adolph Green, Jerry Hadley, Della Jones, Christa Ludwig extracted successfully.
+[2025-04-11T16:28:23.442+0000] {api_extract.py:68} INFO - Data for David Sánchez extracted successfully.
+[2025-04-11T16:28:25.230+0000] {api_extract.py:68} INFO - Data for Michael Nesmith extracted successfully.
+[2025-04-11T16:28:26.877+0000] {api_extract.py:68} INFO - Data for Virginia Warnken extracted successfully.
+[2025-04-11T16:28:28.481+0000] {api_extract.py:68} INFO - Data for Sugaray Rayford extracted successfully.
+[2025-04-11T16:28:30.138+0000] {api_extract.py:68} INFO - Data for Bob Carlisle, Jeff Carson extracted successfully.
+[2025-04-11T16:28:31.782+0000] {api_extract.py:68} INFO - Data for Dixie Hummingbirds extracted successfully.
+[2025-04-11T16:28:33.452+0000] {api_extract.py:68} INFO - Data for Robert Russell Bennett, conductor extracted successfully.
+[2025-04-11T16:28:35.138+0000] {api_extract.py:68} INFO - Data for Phil Woods Quartet extracted successfully.
+[2025-04-11T16:28:36.779+0000] {api_extract.py:68} INFO - Data for Gunna extracted successfully.
+[2025-04-11T16:28:38.430+0000] {api_extract.py:68} INFO - Data for Jessie Reyez extracted successfully.
+[2025-04-11T16:28:40.053+0000] {api_extract.py:68} INFO - Data for D'Angelo extracted successfully.
+[2025-04-11T16:28:41.710+0000] {api_extract.py:68} INFO - Data for George Manahan extracted successfully.
+[2025-04-11T16:28:43.324+0000] {api_extract.py:68} INFO - Data for Joey+Rory extracted successfully.
+[2025-04-11T16:28:45.042+0000] {api_extract.py:68} INFO - Data for The Black Keys extracted successfully.
+[2025-04-11T16:28:46.741+0000] {api_extract.py:68} INFO - Data for La Roux extracted successfully.
+[2025-04-11T16:28:48.394+0000] {api_extract.py:68} INFO - Data for Faith Evans,112 extracted successfully.
+[2025-04-11T16:28:50.075+0000] {api_extract.py:68} INFO - Data for 50 Cent extracted successfully.
+[2025-04-11T16:28:51.754+0000] {api_extract.py:68} INFO - Data for Vikki Carr extracted successfully.
+[2025-04-11T16:28:53.392+0000] {api_extract.py:68} INFO - Data for George Winston extracted successfully.
+[2025-04-11T16:28:55.164+0000] {api_extract.py:68} INFO - Data for The Cleveland Orchestra extracted successfully.
+[2025-04-11T16:28:56.835+0000] {api_extract.py:68} INFO - Data for Ariana Grande extracted successfully.
+[2025-04-11T16:28:58.572+0000] {api_extract.py:68} INFO - Data for John Luther Adams extracted successfully.
+[2025-04-11T16:29:00.267+0000] {api_extract.py:68} INFO - Data for Herbie Hancock, Pink, India.Arie, Seal, Konono No 1, Jeff Beck extracted successfully.
+[2025-04-11T16:29:01.947+0000] {api_extract.py:68} INFO - Data for Adele extracted successfully.
+[2025-04-11T16:29:03.718+0000] {api_extract.py:68} INFO - Data for Asleep At The Wheel,Béla Fleck extracted successfully.
+[2025-04-11T16:29:05.391+0000] {api_extract.py:68} INFO - Data for Orchestre De L'Opera De Paris extracted successfully.
+[2025-04-11T16:29:07.055+0000] {api_extract.py:68} INFO - Data for Narada Michael Walden extracted successfully.
+[2025-04-11T16:29:08.689+0000] {api_extract.py:68} INFO - Data for The Carters extracted successfully.
+[2025-04-11T16:29:10.428+0000] {api_extract.py:68} INFO - Data for Tanvi Shah, songwriters (A.R. Rahman, Sukhvinder Singh, Tanvi Shah, Mahalaxmi Iyer extracted successfully.
+[2025-04-11T16:29:12.607+0000] {api_extract.py:68} INFO - Data for Gorillaz,De La Soul extracted successfully.
+[2025-04-11T16:29:14.255+0000] {api_extract.py:68} INFO - Data for The Maytals extracted successfully.
+[2025-04-11T16:29:15.873+0000] {api_extract.py:68} INFO - Data for Edwin Hawkins extracted successfully.
+[2025-04-11T16:29:17.600+0000] {api_extract.py:68} INFO - Data for Steve Lillywhite extracted successfully.
+[2025-04-11T16:29:19.292+0000] {api_extract.py:68} INFO - Data for Eminem,Rihanna extracted successfully.
+[2025-04-11T16:29:20.935+0000] {api_extract.py:68} INFO - Data for Charles Bruffy, Phoenix Bach Choir extracted successfully.
+[2025-04-11T16:29:22.860+0000] {api_extract.py:68} INFO - Data for Arts Seminar Mass Choir extracted successfully.
+[2025-04-11T16:29:24.533+0000] {api_extract.py:68} INFO - Data for Kurt Elling extracted successfully.

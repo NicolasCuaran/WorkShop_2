@@ -3,3 +3,5 @@ venv/
 .env
 Notebooks/api_data.csv
 Notebooks/artist.csv
+__pycache__/
+*.pyc

@@ -1,0 +1,52 @@
+[2025-04-11T03:53:02.035+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-04-11T03:53:02.050+0000] {taskinstance.py:2603} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_dag.data_storing scheduled__2025-04-10T00:00:00+00:00 [queued]>
+[2025-04-11T03:53:02.072+0000] {taskinstance.py:2603} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_dag.data_storing scheduled__2025-04-10T00:00:00+00:00 [queued]>
+[2025-04-11T03:53:02.073+0000] {taskinstance.py:2856} INFO - Starting attempt 14 of 15
+[2025-04-11T03:53:02.091+0000] {taskinstance.py:2879} INFO - Executing <Task(_PythonDecoratedOperator): data_storing> on 2025-04-10 00:00:00+00:00
+[2025-04-11T03:53:02.098+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=2101) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-04-11T03:53:02.099+0000] {standard_task_runner.py:72} INFO - Started process 2105 to run task
+[2025-04-11T03:53:02.100+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'etl_dag', 'data_storing', 'scheduled__2025-04-10T00:00:00+00:00', '--job-id', '65', '--raw', '--subdir', 'DAGS_FOLDER/dag_for_workshop.py', '--cfg-path', '/tmp/tmpz9dylx0r']
+[2025-04-11T03:53:02.102+0000] {standard_task_runner.py:105} INFO - Job 65: Subtask data_storing
+[2025-04-11T03:53:02.158+0000] {task_command.py:467} INFO - Running <TaskInstance: etl_dag.data_storing scheduled__2025-04-10T00:00:00+00:00 [running]> on host c97e2588350c
+[2025-04-11T03:53:03.773+0000] {taskinstance.py:3122} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='example@example.com' AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='etl_dag' AIRFLOW_CTX_TASK_ID='data_storing' AIRFLOW_CTX_EXECUTION_DATE='2025-04-10T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='14' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-04-10T00:00:00+00:00'
+[2025-04-11T03:53:03.775+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-04-11T03:53:04.961+0000] {store.py:38} INFO - Starting Google Drive authentication process.
+[2025-04-11T03:53:04.963+0000] {store.py:50} INFO - Saved credentials not found, performing web authentication.
+[2025-04-11T03:53:04.964+0000] {store.py:64} ERROR - Authentication error: Invalid client secrets file ('Error opening file', '/opt/***/drive_conf/client_secrets.json', 'No such file or directory', 2)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/oauth2client/clientsecrets.py", line 121, in _loadfile
+    with open(filename, 'r') as fp:
+         ^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/opt/airflow/drive_conf/client_secrets.json'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/pydrive2/auth.py", line 548, in LoadClientConfigFile
+    client_type, client_info = clientsecrets.loadfile(
+                               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/oauth2client/clientsecrets.py", line 165, in loadfile
+    return _loadfile(filename)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/oauth2client/clientsecrets.py", line 124, in _loadfile
+    raise InvalidClientSecretsError('Error opening file', exc.filename,
+oauth2client.clientsecrets.InvalidClientSecretsError: ('Error opening file', '/opt/***/drive_conf/client_secrets.json', 'No such file or directory', 2)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/airflow/plugins/load_and_store/store.py", line 52, in auth_drive
+    gauth.LoadClientConfigFile(client_secrets_file)
+  File "/home/airflow/.local/lib/python3.12/site-packages/pydrive2/auth.py", line 552, in LoadClientConfigFile
+    raise InvalidConfigError("Invalid client secrets file %s" % error)
+pydrive2.settings.InvalidConfigError: Invalid client secrets file ('Error opening file', '/opt/***/drive_conf/client_secrets.json', 'No such file or directory', 2)
+[2025-04-11T03:53:04.969+0000] {store.py:83} INFO - Storing merged_data on Google Drive.
+[2025-04-11T03:53:05.603+0000] {etl.py:89} ERROR - Error storing data locally: 'NoneType' object has no attribute 'CreateFile'
+[2025-04-11T03:53:05.643+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-04-11T03:53:05.653+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-04-11T03:53:05.654+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=etl_dag, task_id=data_storing, run_id=scheduled__2025-04-10T00:00:00+00:00, execution_date=20250410T000000, start_date=20250411T035302, end_date=20250411T035305
+[2025-04-11T03:53:05.685+0000] {local_task_job_runner.py:261} INFO - Task exited with return code 0
+[2025-04-11T03:53:05.704+0000] {taskinstance.py:3891} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-04-11T03:53:05.708+0000] {local_task_job_runner.py:240} INFO - ::endgroup::

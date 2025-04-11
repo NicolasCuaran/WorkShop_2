@@ -1,0 +1,26 @@
+[2025-04-11T03:36:24.760+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-04-11T03:36:24.795+0000] {taskinstance.py:2603} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_dag.data_loading scheduled__2025-04-10T00:00:00+00:00 [queued]>
+[2025-04-11T03:36:24.810+0000] {taskinstance.py:2603} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_dag.data_loading scheduled__2025-04-10T00:00:00+00:00 [queued]>
+[2025-04-11T03:36:24.812+0000] {taskinstance.py:2856} INFO - Starting attempt 14 of 15
+[2025-04-11T03:36:24.836+0000] {taskinstance.py:2879} INFO - Executing <Task(_PythonDecoratedOperator): data_loading> on 2025-04-10 00:00:00+00:00
+[2025-04-11T03:36:24.842+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1859) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-04-11T03:36:24.844+0000] {standard_task_runner.py:72} INFO - Started process 1864 to run task
+[2025-04-11T03:36:24.845+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'etl_dag', 'data_loading', 'scheduled__2025-04-10T00:00:00+00:00', '--job-id', '59', '--raw', '--subdir', 'DAGS_FOLDER/dag_for_workshop.py', '--cfg-path', '/tmp/tmprmspj_ha']
+[2025-04-11T03:36:24.848+0000] {standard_task_runner.py:105} INFO - Job 59: Subtask data_loading
+[2025-04-11T03:36:24.938+0000] {task_command.py:467} INFO - Running <TaskInstance: etl_dag.data_loading scheduled__2025-04-10T00:00:00+00:00 [running]> on host c97e2588350c
+[2025-04-11T03:36:26.154+0000] {taskinstance.py:3122} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='example@example.com' AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='etl_dag' AIRFLOW_CTX_TASK_ID='data_loading' AIRFLOW_CTX_EXECUTION_DATE='2025-04-10T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='14' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-04-10T00:00:00+00:00'
+[2025-04-11T03:36:26.155+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-04-11T03:36:27.080+0000] {load.py:25} INFO - Loading clean data to the database.
+[2025-04-11T03:36:27.081+0000] {db_operations.py:21} INFO - Connecting to database database workshop_2 , user workshop2, host dpg-cvrve4q4d50c73d7h19g-a.ohio-postgres.render.com, port 5432, password O0mkYGKfG2jhnjOCxKKnhDE2dhLgxaEg
+[2025-04-11T03:36:29.065+0000] {db_operations.py:51} INFO - Attempting to create/load table merged_data from Pandas DataFrame
+[2025-04-11T03:36:30.893+0000] {db_operations.py:55} INFO - Table merged_data does not exist. Creating it...
+[2025-04-11T03:36:31.717+0000] {db_operations.py:69} INFO - Table schema for merged_data created.
+[2025-04-11T03:37:37.128+0000] {db_operations.py:73} INFO - Data successfully loaded into table merged_data.
+[2025-04-11T03:37:37.155+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-04-11T03:37:37.162+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-04-11T03:37:37.163+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=etl_dag, task_id=data_loading, run_id=scheduled__2025-04-10T00:00:00+00:00, execution_date=20250410T000000, start_date=20250411T033624, end_date=20250411T033737
+[2025-04-11T03:37:37.214+0000] {local_task_job_runner.py:261} INFO - Task exited with return code 0
+[2025-04-11T03:37:37.228+0000] {taskinstance.py:3891} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-04-11T03:37:37.231+0000] {local_task_job_runner.py:240} INFO - ::endgroup::
